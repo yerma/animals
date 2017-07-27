@@ -1,0 +1,153 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Coming Soon', cursive;
+    background-color: #b2c574;
+}
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    font-size: 1.5em;
+    width: 60px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background-color: #FFF;
+    border-radius: 30px;
+}
+
+.container > div {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container > div img {
+    height: 30vh;
+}
+
+#elephant .head,
+#lion .head,
+#cat .head,
+#sheep .head,
+#dog .head,
+#pig .head,
+#cow .head,
+#rooster .head {
+    transform-origin: center;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+/* Animation */
+
+.animal-active .head {
+    animation: head-mov 3s ease-in-out;
+}
+
+@keyframes head-mov {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    75% { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Cat */
+
+#cat .cls-1{opacity:0.1;}
+#cat .cls-2,#cat .cls-6{fill:#231f20;}
+#cat .cls-3{fill:#fff;}
+#cat .cls-4{fill:#caa383;}
+#cat .cls-5{fill:#f5b041;}
+#cat .cls-6, #cat .cls-8{opacity:0.2;}
+#cat .cls-7{fill:#424242;}
+#cat .cls-9{fill:#f9a2a1;}
+#cat .cls-10{fill:#b18e72;}
+
+/* Lion */
+#lion .cls-1{opacity:0.1;}
+#lion .cls-2{fill:#231f20;}
+#lion .cls-3{fill:#f8ad1c;}
+#lion .cls-4{fill:#e66021;}
+#lion .cls-5{fill:#f38c6b;}
+#lion .cls-6{fill:#a03615;}
+#lion .cls-7{fill:#f6e1d0;}
+#lion .cls-8{fill:#3f2322;}
+#lion .cls-9{fill:#643e39;}
+
+/* Sheep */
+#sheep .cls-1, #sheep .cls-4{opacity:0.1;}
+#sheep .cls-2, #sheep .cls-4{fill:#231f20;}
+#sheep .cls-3{fill:#dcc1ad;}
+#sheep .cls-5{fill:#caa383;}
+#sheep .cls-6{fill:#fff;}
+#sheep .cls-7{opacity: 0.2;}
+#sheep .cls-8{fill: #ffc7b3;}
+#sheep .cls-9{fill:#424242;}
+#sheep .cls-10{fill:#f56462;}
+
+/* Elephant */
+#elephant .cls-1{opacity:0.1;}
+#elephant .cls-2{fill:#231f20;}
+#elephant .cls-3{fill:#b7ad91;}
+#elephant .cls-4{fill:#a0977f;}
+#elephant .cls-5{fill:#f0dac3;}
+#elephant .cls-6{fill:#f38c6b;}
+#elephant .cls-7{fill:#f6e1d0;}
+#elephant .cls-8{fill:#3f2322;}
+#elephant .cls-9{fill:#643e39;}
+#elephant .cls-10{fill:#c6bda6;}
+
+/* Dog */
+#dog .cls-1,#dog .cls-5{opacity:0.1;}
+#dog .cls-2, #dog .cls-5{fill:#231f20;}
+#dog .cls-3{fill:#f5b041;}
+#dog .cls-4{fill:#b88431;}
+#dog .cls-6{opacity: 0.2;}
+#dog .cls-7{fill:#fff;}
+#dog .cls-8{fill:#d1d1d1;}
+#dog .cls-9{fill: #424242;}
+
+/* Pig */
+#pig .cls-1, #pig .cls-4{opacity:0.1;}
+#pig .cls-2, #pig .cls-4{fill:#231f20;}
+#pig .cls-3{fill:#f56462;}
+#pig .cls-5{fill:#f78381;}
+#pig .cls-6{opacity: 0.2;}
+#pig .cls-7{fill:#fff;}
+#pig .cls-8{fill:#f9a2a1;}
+#pig .cls-9{fill: #424242;}
+
+/* Cow */
+#cow .cls-1{opacity:0.1;}
+#cow .cls-2{fill:#231f20;}
+#cow .cls-3{fill:#fff;}
+#cow .cls-4{fill:#424242;}
+#cow .cls-5{opacity: 0.2;}
+#cow .cls-6{fill: #d1d1d1;}
+#cow .cls-7{fill:#dcc1ad;}
+#cow .cls-8{fill:#caa383;}
+
+/* Rooster */
+#rooster .cls-1, #rooster .cls-9{opacity:0.1;}
+#rooster .cls-2, #rooster .cls-9{fill:#231f20;}
+#rooster .cls-3{fill:#f7e041;}
+#rooster .cls-4{fill:#424242;}
+#rooster .cls-5{opacity:0.2;}
+#rooster .cls-6{fill:#fff;}
+#rooster .cls-7{fill:#efac71;}
+#rooster .cls-8{fill:#e74c3c;}
+#rooster .cls-10{opacity:0.5;}
