@@ -796,8 +796,14 @@
             thisAnimal = document.querySelector('.' + this.dataset.animal + ' svg');
             audio = document.querySelector('#snd-' + this.dataset.animal);
         } else {
-            thisAnimal = document.querySelector('div[data-key="'+ e.keyCode + '"] svg');
-            audio = document.querySelector('audio[data-key="'+ e.keyCode + '"]');
+            var keyCode = e.keyCode;
+
+            if(keyCode >=97 && keyCode <= 104) {
+                keyCode -= 48;
+            }
+
+            thisAnimal = document.querySelector('div[data-key="'+ keyCode + '"] svg');
+            audio = document.querySelector('audio[data-key="'+ keyCode + '"]');
         }
 
         if(!audio || !thisAnimal) return;
@@ -808,7 +814,7 @@
     }
 
     btns.forEach(function (btn) {
-        // Delete the '//' in the next line to make the buttons work
+        // Delete the '//' in the next line to make the buttons work4
         btn.addEventListener('click', play);
     });
 
