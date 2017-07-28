@@ -20,36 +20,30 @@ a {
 }
 
 .btn {
-    font-size: 1.5em;
+    font-size: 1em;
     width: 60px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     background-color: #FFF;
     border-radius: 30px;
+    padding: 3px 12px;
 }
 
 .container > div {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 2vh;
+    height: 35vh;
 }
 
-.container > div img {
-    height: 30vh;
+.container > div svg {
+    max-height: 100%;
 }
 
-#elephant .head,
-#lion .head,
-#cat .head,
-#sheep .head,
-#dog .head,
-#pig .head,
-#cow .head,
-#rooster .head {
+.head {
     transform-origin: center;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
+}
+
+#rooster .head {
+    transform-origin: center bottom;
 }
 
 /* Animation */
@@ -60,8 +54,8 @@ a {
 
 @keyframes head-mov {
     0% { transform: rotate(0deg); }
-    25% { transform: rotate(20deg); }
-    75% { transform: rotate(-20deg); }
+    25% { transform: rotate(15deg); }
+    75% { transform: rotate(-15deg); }
     100% { transform: rotate(0deg); }
 }
 
