@@ -5,14 +5,45 @@
 }
 
 body {
-    font-family: 'Coming Soon', cursive;
-    background-color: #b2c574;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    background: #9cd8c7;
+    box-sizing: border-box;
+    color: #303030;
 }
 
 h1 {
     font-size: 4em;
     text-align: center;
-    margin: 16px;
+    margin: 10px 0 16px -16px;
+    width: fit-content;
+    transform: rotate(-5deg);
+    position: relative;
+    line-height: 1;
+    display: flex;
+}
+
+h1 span {
+    color: #4ED9B1;
+    padding: 8px 64px;
+    background: white;
+    position: relative;
+    z-index: 2;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+}
+
+h1::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4ED9B1;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    z-index: 1;
+    transform-origin: top left;
+    transform: rotate(1deg);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
 }
 
 a {
@@ -29,7 +60,7 @@ a {
 }
 
 .btn {
-    font-size: 1em;
+    font-size: 1.2em;
     width: 60px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     background-color: #FFF;
@@ -39,16 +70,25 @@ a {
     display: block;
     margin: 0 auto;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    border: 1px solid #4ED9B1;
 }
 
 .btn:hover {
     box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    background-color: #BB94F2;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border-color: #A066F2;
 }
 
 .container > div {
     text-align: center;
     margin-bottom: 8vh;
     height: 32vh;
+    background: rgb(78,217,177);
+    background: radial-gradient(circle, rgba(78,217,177, 1) 5%, rgba(78, 217, 177, 0) 50%)
 }
 
 .container > div svg {
