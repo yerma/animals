@@ -105,6 +105,10 @@ a {
     transform-origin: center 80%;
 }
 
+.frog .head {
+    transform-origin: center 75%;
+}
+
 /* Animation */
 
 .animal-active .head {
