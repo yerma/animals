@@ -81,6 +81,29 @@ a {
     100% { transform: rotate(0deg); }
 }
 
+/* Animation wing */
+.wing {
+    transform-box: fill-box;
+    transform-origin: top right;
+}
+
+.animal-active .wing {
+    animation: wing-mov 2.5s ease-in-out;  
+}
+
+@keyframes wing-mov {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(20deg); }
+    35% { transform: rotate(-10deg);}
+    55% { transform: rotate(20deg); }
+    90% { transform: rotate(0deg); }
+}
+
+.shadow {
+    fill:#231f20;
+    opacity: 0.1;
+}
+
 /* Cat */
 
 #cat .cls-1{opacity:0.1;}
