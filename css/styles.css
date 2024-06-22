@@ -10,13 +10,22 @@ body {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
+    margin: 16px;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.container {
+    width: 100%;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
 }
 
 .btn {
@@ -26,6 +35,14 @@ a {
     background-color: #FFF;
     border-radius: 30px;
     padding: 3px 12px;
+    min-width: 64px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 }
 
 .container > div {
@@ -36,6 +53,7 @@ a {
 
 .container > div svg {
     max-height: 100%;
+    width: 100%;
 }
 
 .head {
