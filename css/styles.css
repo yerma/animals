@@ -5,13 +5,51 @@
 }
 
 body {
-    font-family: 'Coming Soon', cursive;
-    background-color: #b2c574;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    background: #9cd8c7;
+    box-sizing: border-box;
+    color: #303030;
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
+    margin: 10px 0 16px -16px;
+    width: fit-content;
+    transform: rotate(-5deg);
+    position: relative;
+    line-height: 1;
+    display: flex;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+h1 span {
+    color: #4ED9B1;
+    padding: 8px 64px;
+    background: white;
+    position: relative;
+    z-index: 2;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+}
+
+h1::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4ED9B1;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    z-index: 1;
+    transform-origin: top left;
+    transform: rotate(1deg);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
 }
 
 a {
@@ -19,23 +57,56 @@ a {
     color: inherit;
 }
 
+.container {
+    width: 100%;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 16px;
+    }
+}
+
 .btn {
-    font-size: 1em;
+    font-size: 1.2em;
     width: 60px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     background-color: #FFF;
     border-radius: 30px;
     padding: 3px 12px;
+    min-width: 64px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    border: 1px solid #4ED9B1;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    background-color: #BB94F2;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border-color: #A066F2;
 }
 
 .container > div {
     text-align: center;
     margin-bottom: 8vh;
     height: 32vh;
+    background: rgb(78,217,177);
+    background: radial-gradient(circle, rgba(78,217,177, 1) 5%, rgba(78, 217, 177, 0) 50%)
 }
 
 .container > div svg {
     max-height: 100%;
+    width: 100%;
 }
 
 .head {
@@ -45,6 +116,10 @@ a {
 
 #rooster .head {
     transform-origin: center 80%;
+}
+
+.frog .head {
+    transform-origin: center 75%;
 }
 
 /* Animation */
@@ -79,6 +154,29 @@ a {
     50% { transform: rotate(15deg);}
     75% { transform: rotate(-15deg); }
     100% { transform: rotate(0deg); }
+}
+
+/* Animation wing */
+.wing {
+    transform-box: fill-box;
+    transform-origin: 80% 20%;
+}
+
+.animal-active .wing {
+    animation: wing-mov 2.5s ease-in-out;  
+}
+
+@keyframes wing-mov {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(20deg); }
+    35% { transform: rotate(-10deg);}
+    55% { transform: rotate(20deg); }
+    90% { transform: rotate(0deg); }
+}
+
+.shadow {
+    fill:#231f20;
+    opacity: 0.1;
 }
 
 /* Cat */
@@ -167,3 +265,45 @@ a {
 #rooster .cls-7{fill:#efac71;}
 #rooster .cls-8{fill:#e74c3c;}
 #rooster .cls-10{opacity:0.5;}
+
+
+footer {
+    width: fit-content;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: -8px;
+    padding: 4px 12px;
+    background: white;
+    font-size: 0.8rem;
+    color: #686767;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    gap: 24px;
+    height: 24px;
+    overflow: hidden;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+footer .attribution-content {
+    width: 0;
+    opacity: 0;
+    display: flex;
+    gap: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .attribution-content a {
+    color: #A066F2;
+}
+
+footer .attribution-content a:hover {
+    color: #BB94F2;
+    text-decoration: underline;
+}
+
+footer:hover .attribution-content {
+    width: auto;
+    opacity: 1;
+}
